@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- METAS -->
+  <meta charset="UTF-8" />
+  <meta name=»description» content="app para guardar links de roms y emuladores">
+  <!-- Sirve para indicar que se desea permitir la indexación de la página por los motores de búsqueda  NOINDEX, NOFOLLOW es para que los motores no miren a donde van los links de 3ros y ARCHIVE para que pueda usar la m. cache-->
+  <meta name="robots" content="NOINDEX,NOFOLLOW,ARCHIVE">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fonts texto-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- fonts titulo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+  <title>8 bits</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.jsx"></script>
+  <!--  este script toma el valor de la posición de la pantalla y lo aplica al body de la página por medio del mouse-->
+  <script>
+    document.addEventListener('mousemove', function (e) {
+      let x = e.clientX / window.innerWidth * 70;
+      let y = e.clientY / window.innerHeight * 10;
+      document.body.style.backgroundPosition = `${x}% ${y}%`;
+    });
+  </script>
+</body>
+
+</html>

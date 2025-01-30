@@ -1,0 +1,12 @@
+footer {
+  //position y bootom son para que se mantengan siempre abajo de todo, el width es para que ocupe todo el ancho.
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-footer);
+  
+}

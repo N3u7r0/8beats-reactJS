@@ -1,0 +1,85 @@
+.contenedor-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+  margin: 1vh 1vw 4.5vh 1vw;
+}
+.contenedor-cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 1vw 1vh 1vw 1vh;
+  height: auto;
+  background-image: linear-gradient(transparent 0%, var(--color-card-gradiante-mid) 60%, rgba(0, 0, 0, 0.35) 90%, black 100%);
+  background-color: var(--color-card-background);
+  border: solid 0.25vh var(--color-border);
+  box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.7s, margin 0.4s;
+  border: auto 1.5rem auto 1.5rem;
+  border: solid 1px var(--color-border);
+  margin: auto 1.1rem auto 1.1rem;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+.contenedor-cards .card ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+}
+.contenedor-cards .card ul .img-card {
+  display: flex;
+  align-items: center;
+  width: 92%;
+  height: 30vh;
+  margin: auto;
+  border: solid 0.2vh var(--color-border);
+  transition: 0.5;
+}
+.contenedor-cards .card ul p {
+  height: 0rem;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  font-size: 0rem;
+  transition: 0.4s;
+}
+.contenedor-cards .card ul .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 8.5rem;
+  border-radius: 100px;
+  background: linear-gradient(to top, black, rgb(50, 2, 112));
+  transition: box-shadow 0.7s;
+}
+.contenedor-cards .card ul .btn:hover {
+  background: linear-gradient(to top, rgba(26, 25, 25, 0.9), rgba(136, 12, 174, 0.9));
+  box-shadow: 0px 0px 12px 1px var(--color-shadow);
+  transition: all 0.4s;
+}
+.contenedor-cards .card ul .btn:active {
+  box-shadow: 0px 0px 50px 0px rgb(250, 0, 250);
+  color: whitesmoke;
+  transition: 0.4s;
+}
+.contenedor-cards .card:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: -3px 15px 12px 2px rgba(0, 0, 0, 0.8);
+  transform: scale(1.1, 1.1);
+  margin: 0.5rem;
+  transition: 0.5s;
+}
+.contenedor-cards .card:hover .img-card {
+  border: solid 0.3vh var(--color-border);
+  box-shadow: 0px 0px 5px 3px var(--color-shadow);
+  border-radius: 5px;
+  transition: 0.4s;
+}
+.contenedor-cards .card:hover p {
+  height: 5.8vh;
+  overflow-x: auto;
+  font-size: smaller;
+  transition: 0.3s;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+.card-emuladores .img-card-emuladores {
+  max-height: 10rem;
+  border-radius: 18%;
+}
+.card-emuladores:hover ul .contenedor-texto-emuladores {
+  width: 100%;
+  padding: 0.2rem;
+  text-align: left;
+  border: solid 3px var(--color-border);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.card-emuladores:hover ul .contenedor-texto-emuladores p:first-of-type {
+  height: 6vh;
+}
+.card-emuladores:hover ul .contenedor-texto-emuladores p {
+  border: solid 1px var(--color-border);
+  padding: 0.5rem;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: rgba(0, 0, 0, 0.6);
+}/*# sourceMappingURL=style.css.map */
