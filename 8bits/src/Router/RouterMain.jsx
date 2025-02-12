@@ -7,7 +7,7 @@ export const RouterMain = () => {
   
   return (
     <Routes>
-      <Route path="/8bits-reactJs" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/emuladores" element={<Emuladores />} />
       <Route path="/emuladores/:consola" element={<Emuladores />} />
       <Route path="/roms" element={<Roms />} />

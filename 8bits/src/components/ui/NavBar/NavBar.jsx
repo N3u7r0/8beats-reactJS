@@ -11,7 +11,7 @@ export const NavBar = () => {
 
       <ul>
         <li>
-          <Link to="/8bits-reactJs">
+          <Link to="/">
             <button type="button">Home</button>
           </Link>
         </li>
