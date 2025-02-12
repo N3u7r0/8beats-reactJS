@@ -5,7 +5,8 @@
   padding: 1rem;
   margin: 1vh 1vw 4.5vh 1vw;
 @media (max-width: 420px) {
-    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    padding: 0%;
   }
   .card {
     display: flex;
@@ -90,6 +91,9 @@
       transform: scale(1.1, 1.1);
       margin: 0.5rem;
       transition: 0.5s;
+      @media (max-width: 420px) {
+        transform: scale(1, 1);
+      }
       
       .img-card {
         border: solid 0.3vh var(--color-border);
