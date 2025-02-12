@@ -1,9 +1,8 @@
-// Importa las dependencias necesarias desde Firebase
 import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../../firebase";
 import { useParams, useNavigate } from "react-router";
 import Swal from "sweetalert2";
-// Define el componente BtnDeleteItem
+
 export const BtnDeleteItem = ({ idItem }) => {
   const { id } = useParams();
   const navigate = useNavigate(); // Obtener el objeto navigate
@@ -77,7 +76,6 @@ export const BtnDeleteItem = ({ idItem }) => {
 
   return (
     <button className="btnDeleteItem" onClick={() => handleDeleteClick(idItem)}>
-      <img src="" alt="" />
       Eliminar
       <br />
       archivo

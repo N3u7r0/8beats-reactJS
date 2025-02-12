@@ -4,7 +4,9 @@
   gap: 1.5rem;
   padding: 1rem;
   margin: 1vh 1vw 4.5vh 1vw;
-
+@media (max-width: 420px) {
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  }
   .card {
     display: flex;
     flex-direction: column;
