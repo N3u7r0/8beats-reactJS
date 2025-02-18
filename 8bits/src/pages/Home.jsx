@@ -8,6 +8,9 @@ export const Home = () => {
       <h2 className="tituloPrincipal">Home</h2>
 
       <section className="div-flex">
+        <div className="banner-home" >
+          <div className="banner"></div>
+        </div>
         <FormRoms />
         <FormEmuladores />
       </section>

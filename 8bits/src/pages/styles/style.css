@@ -50,9 +50,33 @@
   align-items: center;
   text-align: center;
   border: solid 3px var(--color-border);
-  background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
   height: 86vh;
   overflow-y: auto;
+  background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
+}
+.div-flex .banner-home {
+  background-color: black;
+  width: 100%;
+  height: 35vh;
+  border-bottom: solid 2px var(--color-border);
+}
+@media (max-width: 900px) {
+  .div-flex .banner-home {
+    height: 25vh;
+  }
+}
+@media (max-width: 650px) {
+  .div-flex .banner-home {
+    height: 15vh;
+  }
+}
+.div-flex .banner-home .banner {
+  background-image: url("../../assets/img_banner-home/8bits-banner.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 520px) {
   .div-flex {

@@ -13,11 +13,10 @@
   justify-content: center;
   border: solid 0.5vh var(--color-border);
   height: 86vh;
- 
 
   // navBar roms y emuladores!
   .nav-itemListContainer {
-    position:sticky;
+    position: sticky;
     width: 100%;
     padding-left: 1.2vh;
     align-items: center;
@@ -46,11 +45,10 @@
     );
     border-top: solid 0.5vh var(--color-border);
     overflow-y: auto;
-/*     para q no se rompa la el hover de las card en los smartphones */
+    /*     para q no se rompa la el hover de las card en los smartphones */
     overflow-x: hidden;
     //control de error para cuando esta cargando la app.
     height: 84vh;
-   
   }
 }
 
@@ -63,14 +61,35 @@
   align-items: center;
   text-align: center;
   border: solid 3px var(--color-border);
+  height: 86vh;
+  overflow-y: auto;
   background: linear-gradient(
     to right,
     black 0%,
     var(--color-background-section) 50%,
     transparent 100%
   );
-  height: 86vh;
-  overflow-y: auto;
+
+  .banner-home {
+    background-color: black;
+    width: 100%;
+    height: 35vh;
+    border-bottom:solid 2px var(--color-border); ;
+    @media (max-width: 900px) {
+      height: 25vh;
+    }
+    @media (max-width: 650px) {
+      height: 15vh;
+    }
+    .banner {
+      background-image: url("../../assets/img_banner-home/8bits-banner.jpg");
+      background-position: center;
+      background-size: contain;
+      background-repeat:no-repeat;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   // control de error para cuando el nav se achica en largo y se agranda en ancho, empujando el contenido hacia abajo.
   @media (max-width: 520px) {
@@ -79,9 +98,7 @@
   @media (max-width: 396px) {
     height: 79vh;
   }
-  
 }
-h5{
+h5 {
   margin: 2vh;
 }
-
