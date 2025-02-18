@@ -14,11 +14,6 @@
   border: solid 0.5vh var(--color-border);
   height: 86vh;
 }
-@media (max-height: 810px) {
-  .div-nav_container-cards {
-    height: 84vh;
-  }
-}
 .div-nav_container-cards .nav-itemListContainer {
   position: sticky;
   width: 100%;
@@ -41,13 +36,9 @@
   background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
   border-top: solid 0.5vh var(--color-border);
   overflow-y: auto;
-  overflow-x: block;
-  height: 86vh;
-}
-@media (max-height: 810px) {
-  .div-nav_container-cards .container-cards {
-    height: 84vh;
-  }
+  /*     para q no se rompa la el hover de las card en los smartphones */
+  overflow-x: hidden;
+  height: 84vh;
 }
 
 /* contenedor de home, rom detail , trucos y home */
@@ -63,9 +54,14 @@
   height: 86vh;
   overflow-y: auto;
 }
-@media (max-height: 810px) {
+@media (max-width: 520px) {
   .div-flex {
-    height: 84vh;
+    height: 82vh;
+  }
+}
+@media (max-width: 396px) {
+  .div-flex {
+    height: 79vh;
   }
 }
 

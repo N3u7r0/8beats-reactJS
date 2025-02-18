@@ -13,9 +13,7 @@
   justify-content: center;
   border: solid 0.5vh var(--color-border);
   height: 86vh;
-  @media (max-height: 810px) {
-    height: 84vh;
-  }
+ 
 
   // navBar roms y emuladores!
   .nav-itemListContainer {
@@ -48,12 +46,11 @@
     );
     border-top: solid 0.5vh var(--color-border);
     overflow-y: auto;
-    overflow-x: block;
+/*     para q no se rompa la el hover de las card en los smartphones */
+    overflow-x: hidden;
     //control de error para cuando esta cargando la app.
-    height: 86vh;
-    @media (max-height: 810px) {
-      height: 84vh;
-    }
+    height: 84vh;
+   
   }
 }
 
@@ -74,10 +71,14 @@
   );
   height: 86vh;
   overflow-y: auto;
-  @media (max-height: 810px) {
-    height: 84vh;
-  }
 
+  // control de error para cuando el nav se achica en largo y se agranda en ancho, empujando el contenido hacia abajo.
+  @media (max-width: 520px) {
+    height: 82vh;
+  }
+  @media (max-width: 396px) {
+    height: 79vh;
+  }
   
 }
 h5{

@@ -1,11 +1,10 @@
 .contenedor-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 1.5rem;
   padding: 1rem;
-  margin: 1vh 1vw 4.5vh 1vw;
+  gap: 1.5rem;
 }
-@media (max-width: 420px) {
+@media (max-width: 475px) {
   .contenedor-cards {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     padding: 0%;
