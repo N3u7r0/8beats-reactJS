@@ -186,7 +186,7 @@
 }
 
 @media (max-width: 420px) {
-  .btnDeleteItem {
+  .btn-delete {
     margin-bottom: 5.5rem;
     z-index: 1;
   }
