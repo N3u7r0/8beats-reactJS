@@ -80,6 +80,7 @@
     }
     @media (max-width: 650px) {
       height: 15vh;
+
     }
     .banner {
       background-image: url("../../assets/img_banner-home/8bits-banner.jpg");
@@ -93,10 +94,10 @@
 
   // control de error para cuando el nav se achica en largo y se agranda en ancho, empujando el contenido hacia abajo.
   @media (max-width: 520px) {
-    height: 82vh;
+    height: 80vh;
   }
   @media (max-width: 396px) {
-    height: 79vh;
+    height: 75vh;
   }
 }
 h5 {

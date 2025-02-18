@@ -80,12 +80,12 @@
 }
 @media (max-width: 520px) {
   .div-flex {
-    height: 82vh;
+    height: 80vh;
   }
 }
 @media (max-width: 396px) {
   .div-flex {
-    height: 79vh;
+    height: 75vh;
   }
 }
 
