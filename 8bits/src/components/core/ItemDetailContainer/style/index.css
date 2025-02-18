@@ -183,4 +183,10 @@
   box-shadow: 0px 0px 0px 200px rgba(0, 0, 0, 0.8);
   cursor: none;
   z-index: 1;
+}
+
+@media (max-width: 420px) {
+  .btnDeleteItem {
+    margin-bottom: 4.2rem;
+  }
 }/*# sourceMappingURL=index.css.map */

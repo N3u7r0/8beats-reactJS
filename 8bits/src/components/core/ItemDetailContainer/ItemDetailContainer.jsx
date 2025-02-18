@@ -50,7 +50,9 @@ export const ItemDetailContainer = ({ rom }) => {
           <Spin src={rom.foto_3||fotoNoDisponible} alt={"foto emulador 3"} />
         </aside>
       </div>
+      <span className="btn-delete">
       <BtnDeleteItem idItem={rom.id} />
+      </span>
     </>
   );
 };
