@@ -165,6 +165,7 @@
       border: solid 0.4vh var(--color-border);
       background-color: rgba(36, 32, 32, 0.762);
       width: 50vw;
+      min-width: 20rem;
       max-height: 20vh;
       overflow-y: auto;
     }
@@ -214,6 +215,6 @@
       position: absolute;
       right: 0;
       bottom: 0;
-      scale: 0.6;
+      scale: 0.7;
  }
 }
