@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./style/style.css";
 export const BtnDark = () => {
   const [botonNeon, setBotonNeon] = useState(true);
 

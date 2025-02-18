@@ -62,29 +62,4 @@ nav ul li button {
   cursor: pointer;
   text-shadow: 4px 4px 3px rgb(0, 0, 0);
   font-size: medium;
-}
-nav .btn_1up {
-  order: 4;
-  position: absolute left;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 100%;
-  padding: 0px 2px 0px 2px;
-  margin: 0.3vh 1vh 0.1vh 1vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: 0px 0px 10px 1px rgb(0, 0, 0);
-  border-bottom: 3px solid rgba(147, 0, 192, 0.651);
-  color: rgba(158, 104, 5, 0.5);
-  cursor: pointer;
-  order: 3;
-}
-nav .btn_1up:hover {
-  box-shadow: 0px 0px 10px 1px rgb(156, 102, 1);
-  background-color: rgba(158, 104, 5, 0.7);
-  transition: all 0.25s;
-}
-nav .btn_1up:active {
-  box-shadow: 0px 0px 7px 6px rgb(255, 166, 0);
-  background-color: rgba(255, 166, 0, 0.7);
-  color: rgb(255, 255, 0);
 }/*# sourceMappingURL=style.css.map */
