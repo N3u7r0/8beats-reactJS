@@ -2,9 +2,16 @@
   display: flex;
   margin: 1vh;
   flex-direction: column;
-  width: 50vh;
+  width: 50%;
   border: solid 2px var(--color-border);
   box-shadow: 0px 0px 10px 1px var(--color-shadow);
+}
+@media (max-width: 800px) {
+  .contenedor_Forms {
+    width: 90%;
+    margin: 0%;
+    margin: 1vh;
+  }
 }
 .contenedor_Forms form {
   display: flex;
@@ -14,6 +21,12 @@
   background-color: var(--color-background-section);
   box-shadow: 0px 0px 10px 1px var(--color-shadow);
 }
+@media (max-width: 800px) {
+  .contenedor_Forms form {
+    width: 100%;
+    margin: 0%;
+  }
+}
 .contenedor_Forms form ul {
   display: flex;
   flex-direction: column;
@@ -21,23 +34,25 @@
   margin: 0.5vh;
   gap: 1vh;
 }
-.contenedor_Forms form ul p {
-  margin: 0.3vh;
-}
 .contenedor_Forms form ul li {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.contenedor_Forms form ul li p {
+  margin: 0.3vh;
 }
 .contenedor_Forms form ul li input {
   display: flex;
   text-align: center;
+  width: 100%;
 }
 .contenedor_Forms form ul li .contenedorFotosForms {
   display: flex;
   flex-direction: column;
   padding: 0.5vh;
   gap: 0.2vh;
-  width: 20vw;
+  width: 90%;
   border: solid 2px var(--color-border);
 }
 
