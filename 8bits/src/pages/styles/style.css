@@ -24,7 +24,7 @@
     height: 82.5vh;
   }
 }
-@media screen and (max-height: 720px) {
+@media screen and (max-height: 710px) {
   .div-nav_container-cards {
     height: 72vh;
   }
@@ -79,7 +79,7 @@
     height: 83vh;
   }
 }
-@media screen and (max-height: 720px) {
+@media screen and (max-height: 710px) {
   .div-flex {
     height: 72vh;
   }
