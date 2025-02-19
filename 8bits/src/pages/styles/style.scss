@@ -69,26 +69,23 @@
     transparent 100%
     );
     height: 86vh;// este determina el alto del contenedor de home, rom detail , trucos y home
-    @media (max-height: 820px) {
+
+///respuesta a la navBar
+    @media (max-width: 540px) {
       height: 84.5vh;
       
     }
-    @media (max-height: 720px) {
-      height: 83.5vh;
-      
-    }
-    @media (max-height: 640px) {
+    @media (max-width: 390px) {
       height: 82.5vh;
       
     }
-    @media (max-width: 520px) {
-      height: 80.5vh;
+
+    // respuesta al alto del contenedor principal (el que tiene el scroll)
+    @media (max-height: 720px) {
+      height: 71.5vh;
       
     }
-    @media (max-width: 385px) {
-      height: 76.5vh;
-      
-    }
+    
     
   .banner-home {
     background-color: black;
