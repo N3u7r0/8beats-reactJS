@@ -21,7 +21,7 @@
     height: 82.5vh;
   }
   // respuesta al alto del contenedor principal (el que tiene el scroll)
-  @media screen and (max-height: 20px) {
+  @media screen and (max-height: 720px) {
     height: 75vh;
   }
 
