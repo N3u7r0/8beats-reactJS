@@ -1,7 +1,7 @@
 .btn_1up {
   order: 4;
-  width:  36px;
-  height: 36px;
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
   padding: 0px 2px 0px 2px;
   margin: 0.3vh 1vh 0.1vh 1vh;
@@ -11,11 +11,11 @@
   color: rgba(158, 104, 5, 0.5);
   cursor: pointer;
   order: 3;
-  @media (max-width: 380px) {
-    position: absolute;
-    top: 0;
+  @media(max-width: 768px) {
+   position: absolute;
+    top: 0; 
     right: 0;
-    margin: 0.5vh
+    margin: 1;
   }
 }
 .btn_1up:hover {
