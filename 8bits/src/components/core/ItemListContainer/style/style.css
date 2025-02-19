@@ -1,13 +1,12 @@
 .contenedor-cards {
   display: grid;
+  gap: 1.2vh;
+  margin: 1.2vh;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  padding: 1rem;
-  gap: 1.5rem;
 }
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 718px) {
   .contenedor-cards {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    padding: 0%;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
 }
 .contenedor-cards .card {
@@ -17,12 +16,10 @@
   height: auto;
   background-image: linear-gradient(transparent 0%, var(--color-card-gradiante-mid) 60%, rgba(0, 0, 0, 0.35) 90%, black 100%);
   background-color: var(--color-card-background);
-  border: solid 0.25vh var(--color-border);
   box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
   transition: box-shadow 0.7s, margin 0.4s;
-  border: auto 1.5rem auto 1.5rem;
-  border: solid 1px var(--color-border);
-  margin: auto 1.1rem auto 1.1rem;
+  border: solid 0.205vh var(--color-border);
+  margin: 0.5vh 0.8vh 0vh 0.8vh;
   overflow: hidden;
   border-radius: 5px;
   transition: 0.2s;
@@ -32,21 +29,23 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
-  gap: 0.5rem;
+  gap: 0.8vh;
 }
 .contenedor-cards .card ul .img-card {
   display: flex;
   align-items: center;
-  width: 92%;
-  height: 30vh;
+  width: 90%;
+  height: 27vh;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: auto;
   border: solid 0.2vh var(--color-border);
   transition: 0.5;
 }
 .contenedor-cards .card ul p {
-  height: 0rem;
-  margin: 0.5rem 1rem 0.5rem 1rem;
-  font-size: 0rem;
+  height: 0px;
+  font-size: 0px;
+  margin: 0.5vh 1vh 0.5vh 1vh;
   transition: 0.4s;
 }
 .contenedor-cards .card ul .btn {
@@ -54,7 +53,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  width: 8.5rem;
+  width: 8.2rem;
   border-radius: 100px;
   background: linear-gradient(to top, black, rgb(50, 2, 112));
   transition: box-shadow 0.7s;
@@ -72,14 +71,9 @@
 .contenedor-cards .card:hover {
   background-color: rgba(0, 0, 0, 0.75);
   box-shadow: -3px 15px 12px 2px rgba(0, 0, 0, 0.8);
-  transform: scale(1.1, 1.1);
-  margin: 0.5rem;
+  transform: scale(1.05, 1);
+  margin: 1.5vh;
   transition: 0.5s;
-}
-@media screen and (max-width: 420px) {
-  .contenedor-cards .card:hover {
-    transform: scale(1, 1);
-  }
 }
 .contenedor-cards .card:hover .img-card {
   border: solid 0.3vh var(--color-border);
@@ -88,8 +82,9 @@
   transition: 0.4s;
 }
 .contenedor-cards .card:hover p {
-  height: 5.8vh;
-  overflow-x: auto;
+  height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
   font-size: smaller;
   transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */

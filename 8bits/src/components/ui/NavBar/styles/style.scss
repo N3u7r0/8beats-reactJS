@@ -16,7 +16,7 @@ nav {
 
   h1 {
     transform: scale(1.4);
-    padding-left: 2.5rem;
+    padding-left: 5.5vh;
     margin: 0%;
     transition: 0.5s;
     @media screen and (max-width: 400px) {
@@ -26,7 +26,7 @@ nav {
       transform: scale(1);
     }
     &:hover {
-      transform: translateY(0.27rem) scale(1.7);
+      transform:  scale(1.5) translateY(0.1vw);
       transition: 0.8s;
     }
   }
@@ -40,13 +40,13 @@ nav {
       justify-content: center;
     }
     li {
-      margin: 0.5rem;
+      margin: 0.5vh 1.2vh 0.5vh 1.2vh;
       transition: 0.5s;
 
       &:hover {
         transform: translateY(
-          0.4rem
-        ); //uso transform para que el elemento se mueva sin que rompa el background del nav.
+          0.4vh// mvimiendo hacia abajo del btn de los navBar
+        );
 
         box-shadow: 0px 0px 60px 22px rgb(0, 0, 0);
         background-color: rgba(0, 0, 0, 0.75);

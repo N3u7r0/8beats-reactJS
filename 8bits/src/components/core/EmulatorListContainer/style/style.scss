@@ -1,28 +1,28 @@
 .card-emuladores {
   .img-card-emuladores {
-    max-height: 10rem;
+    max-height: 15vh;
     border-radius: 18%;
   }
-
+  // efecto hover card emulador,
   &:hover {
     ul {
       .contenedor-texto-emuladores {
         width: 100%;
-        padding: 0.2rem;
+        padding: 0.5vh;
         text-align: left;
         border: solid 3px var(--color-border);
         background-color: rgba(0, 0, 0, 0.3);
         p:first-of-type {
-          height: 6vh;
-        }
         
+          height: 6vh;  //altura de la card emuladores hover.
+        }
+
         p {
           border: solid 1px var(--color-border);
-          padding: 0.5rem;
+          padding: 1vh;
           height: max-content;
           background-color: rgba(0, 0, 0, 0.6);
         }
-      
       }
     }
   }

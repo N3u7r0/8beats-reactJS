@@ -72,7 +72,8 @@
   align-items: center;
   text-align: center;
   border: solid 3px var(--color-border);
-  overflow-y: auto;
+  overflow-x:hidden;
+
   background: linear-gradient(
     to right,
     black 0%,
@@ -89,6 +90,7 @@
     height: 83vh;
   }
   // respuesta al alto del contenedor principal (el que tiene el scroll)
+  //790 px es el alto en el q trabaja el navegador del samsung a34
   @media screen and (max-height: 790px) {
     height: 74.2vh;
   }

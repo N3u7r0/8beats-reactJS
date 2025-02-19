@@ -17,7 +17,7 @@ nav {
 }
 nav h1 {
   transform: scale(1.4);
-  padding-left: 2.5rem;
+  padding-left: 5.5vh;
   margin: 0%;
   transition: 0.5s;
 }
@@ -32,7 +32,7 @@ nav h1 {
   }
 }
 nav h1:hover {
-  transform: translateY(0.27rem) scale(1.7);
+  transform: scale(1.5) translateY(0.1vw);
   transition: 0.8s;
 }
 nav ul {
@@ -47,11 +47,11 @@ nav ul {
   }
 }
 nav ul li {
-  margin: 0.5rem;
+  margin: 0.5vh 1.2vh 0.5vh 1.2vh;
   transition: 0.5s;
 }
 nav ul li:hover {
-  transform: translateY(0.4rem);
+  transform: translateY(0.4vh);
   box-shadow: 0px 0px 60px 22px rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.75);
   transition: 0.2s;

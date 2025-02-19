@@ -2,10 +2,11 @@
   display: grid;
   grid-template-columns: 5fr auto;
   grid-template-rows: auto;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   width: 100%;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .cardtv_cardIformeDetail {
     display: flex;
     flex-direction: column;
@@ -140,8 +141,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1vh;
-  margin: 2.3vh;
+  gap: 0.2vh;
+  margin: 2.5vh;
   overflow: block;
 }
 .cardtv_cardIformeDetail .cardInfoDetail p {
@@ -150,9 +151,14 @@
   border: solid 0.4vh var(--color-border);
   background-color: rgba(36, 32, 32, 0.762);
   width: 50vw;
-  min-width: 20rem;
-  max-height: 20vh;
+  max-height: 15vh;
   overflow-y: auto;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  .cardtv_cardIformeDetail .cardInfoDetail p {
+    width: 90%;
+  }
 }
 .cardtv_cardIformeDetail .fotos-contenedor {
   display: flex;
@@ -193,6 +199,6 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    scale: 0.7;
+    transform: scale(0.8);
   }
 }/*# sourceMappingURL=index.css.map */
