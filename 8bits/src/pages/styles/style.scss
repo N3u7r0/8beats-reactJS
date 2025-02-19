@@ -14,14 +14,14 @@
   border: solid 0.5vh var(--color-border);
   height: 86vh;
   ///respuesta a la navBar
-  @media (max-width: 540px) {
+  @media screen and (max-width: 540px) {
     height: 84.5vh;
   }
-  @media (max-width: 390px) {
+  @media screen and (max-width: 390px) {
     height: 82.5vh;
   }
   // respuesta al alto del contenedor principal (el que tiene el scroll)
-  @media (max-height: 720px) {
+  @media screen and (max-height: 720px) {
     height: 83vh;
   }
 
@@ -82,14 +82,14 @@
   height: 86vh; // este determina el alto del contenedor de home, rom detail , trucos y home
 
   ///respuesta a la navBar
-  @media (max-width: 540px) {
+  @media screen and (max-width: 540px) {
     height: 84.5vh;
   }
-  @media (max-width: 390px) {
+  @media screen and (max-width: 390px) {
     height: 83vh;
   }
   // respuesta al alto del contenedor principal (el que tiene el scroll)
-  @media (max-height: 720px) {
+  @media screen and (max-height: 720px) {
     height: 83.5vh;
   }
 
@@ -98,10 +98,10 @@
     width: 100%;
     height: 35vh;
     border-bottom: solid 2px var(--color-border);
-    @media (max-width: 900px) {
+    @media screen and (max-width: 900px) {
       height: 25vh;
     }
-    @media (max-width: 650px) {
+    @media screen and (max-width: 650px) {
       height: 15vh;
     }
     .banner {

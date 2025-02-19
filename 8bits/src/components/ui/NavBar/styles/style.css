@@ -10,7 +10,7 @@ nav {
   border-bottom: solid 0.5vh var(--color-border);
   box-shadow: 0px 0px 7px 12px rgb(0, 0, 1);
 }
-@media (max-width: 530px) {
+@media screen and (max-width: 530px) {
   nav {
     justify-content: space-evenly;
   }
@@ -21,12 +21,12 @@ nav h1 {
   margin: 0%;
   transition: 0.5s;
 }
-@media (max-width: 400px) {
+@media screen and (max-width: 400px) {
   nav h1 {
     padding-left: 0%;
   }
 }
-@media (max-width: 550px) {
+@media screen and (max-width: 550px) {
   nav h1 {
     transform: scale(1);
   }
@@ -41,7 +41,7 @@ nav ul {
   align-items: center;
   flex-wrap: wrap;
 }
-@media (max-width: 530px) {
+@media screen and (max-width: 530px) {
   nav ul {
     justify-content: center;
   }

@@ -4,7 +4,7 @@
   padding: 1rem;
   gap: 1.5rem;
 }
-@media (max-width: 475px) {
+@media screen and (max-width: 475px) {
   .contenedor-cards {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
     padding: 0%;
@@ -76,7 +76,7 @@
   margin: 0.5rem;
   transition: 0.5s;
 }
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
   .contenedor-cards .card:hover {
     transform: scale(1, 1);
   }
