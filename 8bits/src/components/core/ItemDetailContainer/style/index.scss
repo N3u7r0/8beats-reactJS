@@ -207,14 +207,13 @@
   }
 }
 
-
 .btn-delete {
- @media  screen and(max-width: 420px) {
+  @media screen and(max-width: 420px) {
     margin-bottom: 0.5vh;
-      z-index: 1;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      scale: 0.7;
- }
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    scale: 0.7;
+  }
 }
