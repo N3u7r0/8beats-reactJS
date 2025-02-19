@@ -60,7 +60,6 @@
     overflow-x: hidden;
     //control de error para cuando esta cargando la app. (es el alto del contenedor card sin las cards)
     height: 86vh;
-    
   }
 }
 
@@ -108,10 +107,28 @@
     .banner {
       background-image: url("../../assets/img_banner-home/8bits-banner.jpg");
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       width: 100%;
       height: 100%;
+      border: solid 3px rgba(236, 171, 20, 0.3);
+      box-shadow: 0 0 20px 1px transparent;
+      transition: border-color 1s ease-in-out;
+
+      &:hover {
+        animation: pulso 0.7s infinite alternate;
+      }
+    }
+
+    @keyframes pulso {
+      from {
+        border-color: rgba(255, 230, 1, 0.164);
+        box-shadow: 0 0 20px 1px rgba(255, 230, 1, 0.165);
+      }
+      to {
+        border-color: var(--color-fuente);
+        box-shadow: 0 0 20px 1px var(--color-fuente);
+      }
     }
   }
 }
