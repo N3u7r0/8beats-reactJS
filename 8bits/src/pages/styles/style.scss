@@ -21,8 +21,8 @@
     height: 82.5vh;
   }
   // respuesta al alto del contenedor principal (el que tiene el scroll)
-  @media screen and (max-height: 820px) {
-    height: 72vh;
+  @media screen and (max-height: 20px) {
+    height: 75vh;
   }
 
   // navBar roms y emuladores!
@@ -89,8 +89,8 @@
     height: 83vh;
   }
   // respuesta al alto del contenedor principal (el que tiene el scroll)
-  @media screen and (max-height: 820px) {
-    height: 72vh;
+  @media screen and (max-height: 720px) {
+    height: 75vh;
   }
 
   .banner-home {
