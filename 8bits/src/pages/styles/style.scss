@@ -13,6 +13,17 @@
   justify-content: center;
   border: solid 0.5vh var(--color-border);
   height: 86vh;
+  ///respuesta a la navBar
+  @media (max-width: 540px) {
+    height: 84.5vh;
+  }
+  @media (max-width: 390px) {
+    height: 82.5vh;
+  }
+  // respuesta al alto del contenedor principal (el que tiene el scroll)
+  @media (max-height: 720px) {
+    height: 83vh;
+  }
 
   // navBar roms y emuladores!
   .nav-itemListContainer {
@@ -49,6 +60,7 @@
     overflow-x: hidden;
     //control de error para cuando esta cargando la app. (es el alto del contenedor card sin las cards)
     height: 86vh;
+    
   }
 }
 
@@ -67,48 +79,41 @@
     black 0%,
     var(--color-background-section) 50%,
     transparent 100%
-    );
-    height: 86vh;// este determina el alto del contenedor de home, rom detail , trucos y home
+  );
+  height: 86vh; // este determina el alto del contenedor de home, rom detail , trucos y home
 
-///respuesta a la navBar
-    @media (max-width: 540px) {
-      height: 84.5vh;
-      
-    }
-    @media (max-width: 390px) {
-      height: 82.5vh;
-      
-    }
+  ///respuesta a la navBar
+  @media (max-width: 540px) {
+    height: 84.5vh;
+  }
+  @media (max-width: 390px) {
+    height: 83vh;
+  }
+  // respuesta al alto del contenedor principal (el que tiene el scroll)
+  @media (max-height: 720px) {
+    height: 83.5vh;
+  }
 
-    // respuesta al alto del contenedor principal (el que tiene el scroll)
-    @media (max-height: 720px) {
-      height: 71.5vh;
-      
-    }
-    
-    
   .banner-home {
     background-color: black;
     width: 100%;
     height: 35vh;
-    border-bottom:solid 2px var(--color-border); ;
+    border-bottom: solid 2px var(--color-border);
     @media (max-width: 900px) {
       height: 25vh;
     }
     @media (max-width: 650px) {
       height: 15vh;
-
     }
     .banner {
       background-image: url("../../assets/img_banner-home/8bits-banner.jpg");
       background-position: center;
       background-size: contain;
-      background-repeat:no-repeat;
+      background-repeat: no-repeat;
       width: 100%;
       height: 100%;
     }
   }
-
 }
 h5 {
   margin: 2vh;

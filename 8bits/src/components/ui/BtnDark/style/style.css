@@ -1,7 +1,7 @@
 .btn_1up {
   order: 4;
-  width: 35px;
-  height: 35px;
+  width: 38px;
+  height: 38px;
   border-radius: 100%;
   padding: 0px 2px 0px 2px;
   margin: 0.3vh 1vh 0.1vh 1vh;
@@ -15,7 +15,8 @@
    position: absolute;
     top: 0; 
     right: 0;
-    margin: 1;
+    margin: 0.5vh;
+   
   }
 }
 .btn_1up:hover {

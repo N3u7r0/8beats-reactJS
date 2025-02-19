@@ -14,6 +14,21 @@
   border: solid 0.5vh var(--color-border);
   height: 86vh;
 }
+@media (max-width: 540px) {
+  .div-nav_container-cards {
+    height: 84.5vh;
+  }
+}
+@media (max-width: 390px) {
+  .div-nav_container-cards {
+    height: 82.5vh;
+  }
+}
+@media (max-height: 720px) {
+  .div-nav_container-cards {
+    height: 83vh;
+  }
+}
 .div-nav_container-cards .nav-itemListContainer {
   position: sticky;
   width: 100%;
@@ -61,12 +76,12 @@
 }
 @media (max-width: 390px) {
   .div-flex {
-    height: 82.5vh;
+    height: 83vh;
   }
 }
 @media (max-height: 720px) {
   .div-flex {
-    height: 71.5vh;
+    height: 83.5vh;
   }
 }
 .div-flex .banner-home {
