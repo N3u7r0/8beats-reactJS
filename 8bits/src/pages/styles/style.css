@@ -24,9 +24,9 @@
     height: 82.5vh;
   }
 }
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 750px) {
   .div-nav_container-cards {
-    height: 72vh;
+    height: 74vh;
   }
 }
 .div-nav_container-cards .nav-itemListContainer {
@@ -79,9 +79,9 @@
     height: 83vh;
   }
 }
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 750px) {
   .div-flex {
-    height: 72vh;
+    height: 74vh;
   }
 }
 .div-flex .banner-home {
