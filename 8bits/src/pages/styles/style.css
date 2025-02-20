@@ -15,6 +15,8 @@
 }
 .div-nav_container-cards .nav-itemListContainer {
   position: sticky;
+  display: flex;
+  flex-wrap: nowrap;
   width: 100%;
   padding-left: 1.2vh;
   align-items: center;
@@ -22,8 +24,13 @@
   box-shadow: none;
   border-bottom: none;
 }
-.div-nav_container-cards .nav-itemListContainer h6 {
+.div-nav_container-cards .nav-itemListContainer p {
   margin-left: 1vh;
+}
+@media screen and (max-width: 700px) {
+  .div-nav_container-cards .nav-itemListContainer p {
+    display: none;
+  }
 }
 .div-nav_container-cards .nav-itemListContainer ul {
   margin: 0%;

@@ -26,26 +26,27 @@ nav {
       transform: scale(1);
     }
     &:hover {
-      transform: scale(1.5) translateY(0.1vw);
+      transform:  scale(1.5) translateY(0.1vw);
       transition: 0.8s;
     }
   }
 
   ul {
+    
     display: flex;
     justify-content: left;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     @media screen and (max-width: 530px) {
       justify-content: center;
     }
     li {
-      margin: 1vh 2.5vw 1vh 2.5vw;
+      margin: 0.5vh 1.5vw 0.5vh 1.5vw;
       transition: 0.5s;
 
       &:hover {
         transform: translateY(
-          0.4vh // mvimiendo hacia abajo del btn de los navBar
+          0.4vh// mvimiendo hacia abajo del btn de los navBar
         );
 
         box-shadow: 0px 0px 60px 22px rgb(0, 0, 0);

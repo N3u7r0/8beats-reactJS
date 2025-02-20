@@ -16,6 +16,8 @@
   // navBar roms y emuladores!
   .nav-itemListContainer {
     position: sticky;
+    display: flex;
+    flex-wrap: nowrap;
     width: 100%;
     padding-left: 1.2vh;
     align-items: center;
@@ -24,8 +26,12 @@
     box-shadow: none;
     border-bottom: none;
 
-    h6 {
+    p {
       margin-left: 1vh;
+      @media screen and (max-width: 700px) {
+        display: none;
+        
+      }
     }
     ul {
       margin: 0%;
