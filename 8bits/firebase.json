@@ -1,5 +1,12 @@
 {
   "hosting": {
+"rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+
     "public": "dist",
     "site": "8bitsroms",
     "ignore": [
