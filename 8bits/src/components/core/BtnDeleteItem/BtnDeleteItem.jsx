@@ -3,38 +3,35 @@ import { db } from "../../../firebase";
 import { useParams, useNavigate } from "react-router";
 import Swal from "sweetalert2";
 import "./style/style.css";
+import { useState } from "react";
 
 export const BtnDeleteItem = ({ idItem }) => {
   const { id } = useParams();
-  const navigate = useNavigate(); // Obtener el objeto navigate
+  const navigate = useNavigate();
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  // Función para eliminar un documento en Firestore
   const handleDeleteClick = async () => {
-    // Pregunta de confirmación
+    setIsDeleting(true);
+
     const result = await Swal.fire({
       title: "¿Estás seguro?",
       icon: "question",
       iconColor: "rgba(200, 0, 250, 0.4)",
       showCancelButton: true,
-      confirmButtonColor: "rgba(200, 0, 250, 0.9) ",
+      confirmButtonColor: "rgba(200, 0, 250, 0.9)",
       cancelButtonColor: "rgba(0, 0, 0, 0.9)",
       confirmButtonText: "Sí, eliminarlo",
       cancelButtonText: "Cancelar",
-      color: " rgba(236, 171, 20, 0.9)",
-      
+      color: "rgba(236, 171, 20, 0.9)",
       background: "rgba(0, 0, 0, 0.80)",
     });
 
     if (result.isConfirmed) {
-      // Obtiene las referencias de los documentos de la colección.
       const romRef = doc(db, "roms", idItem || id);
       const emuladorRef = doc(db, "emuladores", idItem);
       try {
         if (romRef) {
-          // Elimina el rom
           await deleteDoc(romRef);
-          console.info("Documento eliminado con éxito:", idItem);
-          //alerta!!!!
           Swal.fire({
             title: "Listo!",
             text: "ROM eliminado con éxito",
@@ -45,17 +42,13 @@ export const BtnDeleteItem = ({ idItem }) => {
             toast: true,
             showConfirmButton: false,
             iconColor: "rgba(200, 0, 250, 0.4)",
-            showCancelButton: true,
-            color: " rgba(236, 171, 20, 0.9)",
+            color: "rgba(236, 171, 20, 0.9)",
             background: "rgba(0, 0, 0, 0.80)",
           });
         }
 
         if (emuladorRef) {
-          // Elimina el emulador
           await deleteDoc(emuladorRef);
-          console.log("Documento eliminado con éxito:", idItem);
-          //alerta!!!!
           Swal.fire({
             title: "Listo!",
             text: "Emulador eliminado con éxito",
@@ -66,13 +59,11 @@ export const BtnDeleteItem = ({ idItem }) => {
             toast: true,
             showConfirmButton: false,
             iconColor: "rgba(200, 0, 250, 0.4)",
-            color: " rgba(236, 171, 20, 0.9)",
+            color: "rgba(236, 171, 20, 0.9)",
             background: "rgba(0, 0, 0, 0.80)",
           });
         }
       } catch (err) {
-        console.error("Error al eliminar el documento: ", err);
-        //alerta!!!!
         Swal.fire({
           title: "Error!",
           text: "Error al eliminar el documento",
@@ -84,19 +75,31 @@ export const BtnDeleteItem = ({ idItem }) => {
           showConfirmButton: false,
         });
       } finally {
-        setTimeout(() => {
-          navigate("/");
-          window.location.reload();
-        }, 2300);
+        if (romRef !== null || undefined) {
+          setTimeout(() => {
+            navigate("/roms");
+            window.location.reload();
+          }, 2000);
+        }
+        if (emuladorRef !== null || undefined) {
+          setTimeout(() => {
+            navigate("/emuladores");
+            window.location.reload();
+          }, 2000);
+        } 
+  
       }
     }
+
+    setIsDeleting(false);
   };
 
   return (
-    <button className="btnDeleteItem" onClick={() => handleDeleteClick(idItem)}>
+    <button className="btnDeleteItem" onClick={() => handleDeleteClick(idItem)} disabled={isDeleting}>
       Eliminar
       <br />
       archivo
     </button>
   );
 };
+
