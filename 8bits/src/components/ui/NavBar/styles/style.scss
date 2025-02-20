@@ -16,11 +16,11 @@ nav {
 
   h1 {
     transform: scale(1.4);
-    padding-left: 5.5vh;
+    padding-left: 2.5vw;
     margin: 0%;
     transition: 0.5s;
     @media screen and (max-width: 400px) {
-      padding-left: 0%;
+      padding-left: 0.5vw;
     }
     @media screen and (max-width: 550px) {
       transform: scale(1);
@@ -41,7 +41,7 @@ nav {
       justify-content: center;
     }
     li {
-      margin: 0.5vh 1.5vw 0.5vh 1.5vw;
+      margin: 0.5rem;
       transition: 0.5s;
 
       &:hover {
