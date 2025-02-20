@@ -11,7 +11,7 @@
   .card {
     display: flex;
     flex-direction: column;
-    padding: 1vw 1vh 1vw 1vh;
+    padding: 1vh 1vw 1vh 1vw;
     height: auto;
     background-image: linear-gradient(
       transparent 0%,
@@ -23,7 +23,7 @@
     box-shadow: 4px 5px 10px 1px rgba(0, 0, 0, 0.8);
     transition: box-shadow 0.7s, margin 0.4s;
     border: solid 0.205vh var(--color-border);
-    margin: 0.5vh 0.8vh 0vh 0.8vh;
+    margin: 0.5vh 0.8vw 0vh 0.8vw;
     overflow: hidden;
     border-radius: 5px;
     transition: 0.2s;
@@ -50,7 +50,7 @@
         //los estados inicale son 0 asi no se ven. (se ven cuando haces hover) texto de card rom
         height: 0px;
         font-size: 0px;
-        margin: 0.5vh 1vh 0.5vh 1vh;
+        margin: 0.5vh 1vw 0.5vh 1vw;
         transition: 0.4s;
       }
 

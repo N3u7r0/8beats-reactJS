@@ -1,21 +1,21 @@
 .btnDeleteItem {
-    width: auto;
-    height: 4.9rem;
-    background-image: url("../../../../assets/img_papelera/papelera.ico");
-    background-position: center cover;
-    background-color: transparent;
-    border: none;
-    text-shadow: 2px 5px 5px black;
-    transition: 0.1s;
-    transform: translateY(1vw);
-
-    &:hover {
-        text-shadow: 2px 2px 1px black;
-        box-shadow: 2px 2px 2px 2px var(--color-shadow);
-        border-radius: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        transition: all 0.2s;
-        color: red
-    }
-
+  width: auto;
+  height: 4.9rem;
+  background-image: url("../../../../assets/img_papelera/papelera.ico");
+  background-position: center cover;
+  background-color: transparent;
+  border: none;
+  text-shadow: 2px 5px 5px black;
+  transition: 0.1s;
+  transform: translateY(1vw);
+  position: relative;
+  bottom: 0;
 }
+.btnDeleteItem:hover {
+  text-shadow: 2px 2px 1px black;
+  box-shadow: 2px 2px 2px 2px var(--color-shadow);
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.2s;
+  color: red;
+}/*# sourceMappingURL=style.css.map */

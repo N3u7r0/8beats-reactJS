@@ -5,23 +5,22 @@
   width: 45%;
   border: solid 2px var(--color-border);
   box-shadow: 0px 0px 10px 1px var(--color-shadow);
-  @media screen and (max-width: 800px) {
+  //media q modifica el ancho de los formularios
+  @media screen and (max-width: 1100px) {
     width: 90%;
     margin: 0%;
-    margin: 1vh;
+    margin: 3vw;
+  
   }
 
   form {
     display: flex;
     flex-direction: column;
     border: solid 2px var(--color-border);
-    margin: 4vh 6vh 4vh 6vh;
+    margin: 2vh 6vw 4vh 6vw;
     background-color: var(--color-background-section);
     box-shadow: 0px 0px 10px 1px var(--color-shadow);
-    @media screen and(max-width: 800px) {
-      width: 100%;
-      margin: 0%;
-    }
+   
     ul {
       display: flex;
       flex-direction: column;

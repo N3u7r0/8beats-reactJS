@@ -6,7 +6,7 @@
   overflow-x: hidden;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .cardtv_cardIformeDetail {
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1vh;
+  margin-top: 1vw;
   gap: 0.5vh;
   color: transparent;
   /* efecto de la card con la tv */
@@ -155,9 +155,9 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .cardtv_cardIformeDetail .cardInfoDetail p {
-    width: 90%;
+    width: 100%;
   }
 }
 .cardtv_cardIformeDetail .fotos-contenedor {
@@ -192,13 +192,17 @@
   z-index: 1;
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 500px) {
   .btn-delete {
     margin-bottom: 0.5vh;
     z-index: 1;
     position: absolute;
     right: 0;
     bottom: 0;
+    margin: 1vh;
     transform: scale(0.8);
+    background-color: black;
+    border: 0.2vh solid var(--color-border);
+    border-radius: 100%;
   }
 }/*# sourceMappingURL=index.css.map */

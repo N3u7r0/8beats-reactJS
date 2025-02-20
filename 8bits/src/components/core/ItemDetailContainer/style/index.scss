@@ -5,7 +5,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     display: flex;
     flex-direction: column;
     padding: 1vh;
@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1vh;
+    margin-top: 1vw;
     gap: 0.5vh;
 
     // control del parpadeo al iniciar la animacion.
@@ -168,8 +168,8 @@
       max-height: 15vh;
       overflow-y: auto;
       overflow-x: hidden;
-      @media (max-width: 768px) {
-        width: 90%;
+      @media  screen and (max-width: 900px) {
+        width: 100%;
       }
     }
   }
@@ -211,12 +211,17 @@
 }
 
 .btn-delete {
-  @media (max-width: 420px) {
+  @media screen and (max-width: 500px) {
     margin-bottom: 0.5vh;
     z-index: 1;
     position: absolute;
     right: 0;
     bottom: 0;
+    margin: 1vh;
     transform: scale(0.8);
+    background-color: black;
+    border: 0.2vh solid var(--color-border);
+    border-radius: 100%;
+    
   }
 }
