@@ -20,6 +20,9 @@ export function FormRoms() {
     foto_3: null,
   });
 
+  // Agregar estado para deshabilitar el botón
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   //desestructuro el nombre y valor del input.
   const handleChange = (input) => {
     const { name, value } = input.target;
@@ -38,7 +41,7 @@ export function FormRoms() {
     }));
   };
 
-//subo la foto a firebase
+  //subo la foto a firebase
   const uploadFile = async (foto, nombreDeLaFotoENFiresbase) => {
     //instacia de guardado
     const storage = getStorage();
@@ -48,20 +51,30 @@ export function FormRoms() {
     await uploadBytes(storageRef, foto);
     //obtengo la url de la foto
     const downloadURL = await getDownloadURL(storageRef);
-    //retorno la url para usarlo en el handleSUbmit.
+    //retorno la url para usarlo en el handleSubmit.
     return downloadURL;
   };
 
-
-//funcion para subir el formulario a firebase.
+  //funcion para subir el formulario a firebase.
   const handleSubmit = async (formulario) => {
     //evito que se recargue la pagina para que le de tiempo a subir el dato.
     formulario.preventDefault();
+    // Deshabilito el botón de submit
+    setIsSubmitting(true);
+
     //array con los campos de texto que no pueden estar vacios.
-        const camposTextoExclutentes = ["titulo", "descripcion", "descripcion_detail", "lanzamiento", "link", "empresa"];
-    const camposLlenos = camposTextoExclutentes.every((campo) => inputsRom[campo] !== "");
+    const camposTextoExclutentes = [
+      "titulo",
+      "descripcion",
+      "descripcion_detail",
+      "lanzamiento",
+      "link",
+      "empresa",
+    ];
 
-
+    const camposLlenos = camposTextoExclutentes.every(
+      (campo) => inputsRom[campo] !== ""
+    );
 
     if (!camposLlenos) {
       //si hay campos vacios muestro un error en la consola.
@@ -69,7 +82,7 @@ export function FormRoms() {
       //Alert!!!!!!!!!
       Swal.fire({
         title: "Error!",
-        text:"Hay campos de texto vacíos!",
+        text: "Hay campos de texto vacíos!",
         icon: "error",
         position: "bottom-end",
         timer: 2000,
@@ -78,6 +91,8 @@ export function FormRoms() {
         showConfirmButton: false,
         popup: "custom-toast", // declaro la clsssname de la alerta y la uso en el css que esta en el src.
       });
+      // Habilito el botón de submit si hay error
+      setIsSubmitting(false);
     } else {
       //si no hay campos vacios subo el formulario a firebase.
       try {
@@ -91,50 +106,54 @@ export function FormRoms() {
             //retorno un objeto con el nombre de la foto y la url de la foto.
             return { [foto]: downloadURL };
           }
-            //si no subio la foto retorno un null para controlar el error
+          //si no subio la foto retorno un null para controlar el error
           return { [foto]: null };
         });
-       //guardo las url de las fotos en un objeto.
-        const fotoURLs = await Promise.all(uploadPromesas);
-        //actualizo el estado de las fotos con las url de las fotos. (... para desestructurar el objeto (todos los inputsRom y todas las fotos))
-        const updatedInputsRom = { ...inputsRom, ...Object.assign({}, ...fotoURLs) };
 
+        //guardo las url de las fotos en un objeto.
+        const fotoURLs = await Promise.all(uploadPromesas);
+
+        //actualizo el estado de las fotos con las url de las fotos.
+        const updatedInputsRom = {
+          ...inputsRom,
+          ...Object.assign({}, ...fotoURLs),
+        };
 
         //subo el formulario a firebase.
         const docRef = await addDoc(collection(db, "roms"), updatedInputsRom);
 
+        //alert!!!!!
         console.info("Documento añadido con ID: ", docRef.id);
-            //alert!!!!!
-           Swal.fire({
-            title: "Listo!",
-            text:"ROM añadido con exito.",
-            icon: "success",
-            position: "bottom-end",
-            timer: 2000,
-            timerProgressBar: true,
-            toast: true,
-            showConfirmButton: false,
-            popup: "custom-toast", // declaro la clsssname de la alerta y la uso en el css que esta en el src.
-          });
-        
-      } catch (err) {
-        console.error("Error al añadir el documento: ", err);
-        //alert!!!!!!
         Swal.fire({
-          title: "Error!",
-          text:"Error al añadir el ROM",
-          icon: "error",
+          title: "Listo!",
+          text: "ROM añadido con éxito.",
+          icon: "success",
           position: "bottom-end",
-          timer: 2000,
+          timer: 1000,
           timerProgressBar: true,
           toast: true,
           showConfirmButton: false,
           popup: "custom-toast", // declaro la clsssname de la alerta y la uso en el css que esta en el src.
         });
-        
-      }finally{
-        //refresh de la pagina para q tome el cambio despues de que suba el formulario.
-        window.location.reload(); 
+      } catch (err) {
+        console.error("Error al añadir el documento: ", err);
+        //alert!!!!!!
+        Swal.fire({
+          title: "Error!",
+          text: "Error al añadir el ROM",
+          icon: "error",
+          position: "bottom-end",
+          timer: 1000,
+          timerProgressBar: true,
+          toast: true,
+          showConfirmButton: false,
+          popup: "custom-toast", // declaro la clsssname de la alerta y la uso en el css que esta en el src.
+        });
+      } finally {
+        //refresh de la pagina para q tome el cambio después de que suba el formulario.
+        setTimeout(() => {
+          window.location.reload();
+        }, 1500);
       }
     }
   };
@@ -219,7 +238,7 @@ export function FormRoms() {
             </div>
           </li>
         </ul>
-        <button type="submit">Subir</button>
+        <button type="submit" disabled={isSubmitting}>Subir</button>
       </form>
     </article>
   );

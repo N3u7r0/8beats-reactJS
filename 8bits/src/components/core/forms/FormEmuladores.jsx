@@ -16,6 +16,9 @@ export function FormEmuladores() {
     foto: null,
   });
 
+  // Agregar estado para deshabilitar el botón
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   //desestructuro el nombre y valor del input.
   const handleChange = (input) => {
     const { name, value } = input.target;
@@ -52,6 +55,9 @@ export function FormEmuladores() {
   const handleSubmit = async (formulario) => {
     //evito que se recargue la pagina para que le de tiempo a subir el dato.
     formulario.preventDefault();
+    // Deshabilito el botón de submit
+    setIsSubmitting(true);
+
     //array con los campos de texto que no pueden estar vacios.
     const camposTextoExclutentes = ["titulo", "consola", "descripcion", "link"];
     const camposLlenos = camposTextoExclutentes.every(
@@ -73,6 +79,8 @@ export function FormEmuladores() {
         showConfirmButton: false,
         popup: "custom-toast", // declaro la clsssname de la alerta y la uso en el css que esta en el src.
       });
+      // Habilito el botón de submit si hay error
+      setIsSubmitting(false);
     } else {
       //si no hay campos vacios subo el formulario a firebase.
       try {
@@ -201,7 +209,7 @@ export function FormEmuladores() {
             </div>
           </li>
         </ul>
-        <button type="submit">Subir</button>
+        <button type="submit" disabled={isSubmitting}>Subir</button>
       </form>
     </article>
   );
