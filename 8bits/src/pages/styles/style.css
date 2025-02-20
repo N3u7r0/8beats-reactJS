@@ -48,6 +48,7 @@
   border-top: solid 0.5vh var(--color-border);
   overflow-y: scroll;
   overflow-x: hidden;
+  padding-bottom: 10vh;
   height: 83vh;
 }
 @media screen and (max-height: 870px) {
@@ -85,6 +86,7 @@
   align-items: center;
   text-align: center;
   overflow-x: hidden;
+  padding-bottom: 10vh;
   margin-bottom: 4vh;
   border: solid 3px var(--color-border);
   background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);

@@ -1,10 +1,12 @@
 .btnDeleteItem {
   width: auto;
-  height: 4.9rem;
+  height: 5rem;
+  font-size: smaller;
   background-image: url("../../../../assets/img_papelera/papelera.ico");
-  background-position: center cover;
+  background-position: top;
   background-color: transparent;
-  border: none;
+  border-radius:100%;
+  border: transparent;
   text-shadow: 2px 5px 5px black;
   transition: 0.1s;
   transform: translateY(1vw);
