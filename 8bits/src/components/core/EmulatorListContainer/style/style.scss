@@ -7,14 +7,13 @@
   &:hover {
     ul {
       .contenedor-texto-emuladores {
-        width: 100%;
+        width: 95%;
         padding: 0.5vh;
         text-align: left;
         border: solid 3px var(--color-border);
         background-color: rgba(0, 0, 0, 0.3);
         p:first-of-type {
-        
-          height: 6vh;  //altura de la card emuladores hover.
+          height: 6vh; //altura de la card emuladores hover.
         }
 
         p {

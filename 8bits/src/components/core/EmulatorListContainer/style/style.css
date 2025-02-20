@@ -3,7 +3,7 @@
   border-radius: 18%;
 }
 .card-emuladores:hover ul .contenedor-texto-emuladores {
-  width: 100%;
+  width: 95%;
   padding: 0.5vh;
   text-align: left;
   border: solid 3px var(--color-border);

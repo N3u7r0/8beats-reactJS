@@ -1,7 +1,7 @@
 .contenedor-cards {
   display: grid;
   gap: 1.2vh;
-  margin: 1.2vh;
+  margin: 1.2vh 1.2vw 5vh 1.2vw;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
 }
 @media screen and (max-width: 718px) {
