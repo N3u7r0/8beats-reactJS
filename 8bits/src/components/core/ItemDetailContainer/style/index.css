@@ -195,12 +195,11 @@
 
 @media screen and (max-width: 500px) {
   .btn-delete {
-    margin-bottom: 0.5vh;
     z-index: 1;
     position: absolute;
     right: 0;
-    bottom: 0;
-    margin: 1vh;
+    bottom: 50;
+    margin: 0.5vh;
     transform: scale(0.8);
     background-color: black;
     border: 0.2vh solid var(--color-border);
