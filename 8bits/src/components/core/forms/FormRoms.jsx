@@ -117,6 +117,7 @@ export function FormRoms() {
         const updatedInputsRom = {
           ...inputsRom,
           ...Object.assign({}, ...fotoURLs),
+          createdAt: new Date(),
         };
 
         //subo el formulario a firebase.
@@ -226,7 +227,11 @@ export function FormRoms() {
           <li>
             <p>Foto portada</p>
             <div className="contenedorFotosForms">
-              <input name="fotoPortada" type="file" onChange={handleFileChange} />
+              <input
+                name="fotoPortada"
+                type="file"
+                onChange={handleFileChange}
+              />
             </div>
           </li>
           <li>
@@ -238,7 +243,9 @@ export function FormRoms() {
             </div>
           </li>
         </ul>
-        <button type="submit" disabled={isSubmitting}>Subir</button>
+        <button type="submit" disabled={isSubmitting}>
+          Subir
+        </button>
       </form>
     </article>
   );

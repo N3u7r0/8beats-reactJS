@@ -106,6 +106,7 @@ export function FormEmuladores() {
         const updatedInputsRom = {
           ...inputsEmuladores,
           ...Object.assign({}, ...fotoURLs),
+          createdAt: new Date(),
         };
         //subo el formulario a firebase.
         const docRef = await addDoc(
@@ -127,18 +128,18 @@ export function FormEmuladores() {
         });
       } catch (err) {
         console.error("Error al añadir el documento: ", err);
-           //alert!!!!!
-           Swal.fire({
-            title: "Error!",
-            text: "Error al añadir el emulador",
-            icon: "error",
-            position: "bottom-end",
-            timer: 2000,
-            timerProgressBar: true,
-            toast: true,
-            showConfirmButton: false,
-            popup: "custom-toast", // declaro la clsssname de la alerta y la uso en el css que esta en el src.
-          });
+        //alert!!!!!
+        Swal.fire({
+          title: "Error!",
+          text: "Error al añadir el emulador",
+          icon: "error",
+          position: "bottom-end",
+          timer: 2000,
+          timerProgressBar: true,
+          toast: true,
+          showConfirmButton: false,
+          popup: "custom-toast", // declaro la clsssname de la alerta y la uso en el css que esta en el src.
+        });
       } finally {
         //refresh de la pagina para q tome el cambio despues de subir el formulario.
         window.location.reload();
@@ -209,7 +210,9 @@ export function FormEmuladores() {
             </div>
           </li>
         </ul>
-        <button type="submit" disabled={isSubmitting}>Subir</button>
+        <button type="submit" disabled={isSubmitting}>
+          Subir
+        </button>
       </form>
     </article>
   );

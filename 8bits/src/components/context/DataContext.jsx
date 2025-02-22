@@ -5,6 +5,7 @@ export const DataContext = createContext();
 export const DataProvider = ({ children }) => {
   const [rom, setRom] = useState([]);
   const [roms, setRoms] = useState([]);
+  const [ ultimosRoms, setUltimosRoms ] = useState([]);
   const [emuladores, setEmuladores] = useState([]);
   //siempre le pasamos un obj xq es mas facil de trabajar y es practico si se quiere escalar.Manejarlos como objetos podes mandar muchos, como una expresion regular solo uno.
   return (
@@ -13,10 +14,12 @@ export const DataProvider = ({ children }) => {
         rom,
         roms,
         emuladores,
+        ultimosRoms,
 
         setRoms,
         setEmuladores,
         setRom,
+        setUltimosRoms,
       }}
     >
       {children}

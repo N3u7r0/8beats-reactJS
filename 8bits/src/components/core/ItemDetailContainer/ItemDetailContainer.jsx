@@ -1,14 +1,13 @@
 import { Spin } from "../../ui";
 import { BtnDeleteItem } from "../BtnDeleteItem";
 import "./style/index.css";
-import fotoNoDisponible from "../../../assets/img_noDisponible/noDisponible.jpg"
+import fotoNoDisponible from "../../../assets/img_noDisponible/noDisponible.jpg";
 export const ItemDetailContainer = ({ rom }) => {
   return rom?.length === 0 ? (
     <Spin />
   ) : (
     <>
       <div className="cardtv_cardIformeDetail">
-
         <article key={rom.id} className="cardTv">
           <h3>{rom.titulo}</h3>
 
@@ -17,7 +16,7 @@ export const ItemDetailContainer = ({ rom }) => {
               <div className="tv-parlante-a"></div>
               <img
                 className="img-card"
-                src={rom.fotoPortada||fotoNoDisponible}
+                src={rom.fotoPortada || fotoNoDisponible}
                 alt={rom.fotoAlt}
               />
               <div className="tv-parlante-b"></div>
@@ -45,14 +44,14 @@ export const ItemDetailContainer = ({ rom }) => {
         </aside>
 
         <aside className="fotos-contenedor">
-          <Spin src={rom.foto_1||fotoNoDisponible} alt={"foto emulador 1"} />
-          <Spin src={rom.foto_2||fotoNoDisponible} alt={"foto emulador 2"} />
-          <Spin src={rom.foto_3||fotoNoDisponible} alt={"foto emulador 3"} />
+          <Spin src={rom.foto_1 || fotoNoDisponible} alt={"foto emulador 1"} />
+          <Spin src={rom.foto_2 || fotoNoDisponible} alt={"foto emulador 2"} />
+          <Spin src={rom.foto_3 || fotoNoDisponible} alt={"foto emulador 3"} />
         </aside>
+        <div className="btn-delete">
+          <BtnDeleteItem idItem={rom.id} />
+        </div>
       </div>
-      <span className="btn-delete">
-      <BtnDeleteItem idItem={rom.id} />
-      </span>
     </>
   );
 };

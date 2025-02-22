@@ -80,14 +80,11 @@
 /* contenedor del box home, rom detail , trucos y home */
 .div-flex {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow-x: hidden;
-  padding-bottom: 10vh;
-  margin-bottom: 4vh;
   border: solid 3px var(--color-border);
   background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
   height: 87vh;
@@ -112,23 +109,52 @@
     height: 83vh;
   }
 }
-.div-flex .banner-home {
+
+.div-flex-home {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: 60vh;
+  padding-bottom: 10vh;
+  overflow: auto;
+  border: solid 3px var(--color-border);
+  background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
+}
+.div-flex-home .div-ultimoRoms {
+  border: solid 3px var(--color-border);
+  background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
+  width: 95%;
+}
+.div-flex-home .forms-home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: solid 3px var(--color-border);
+  background: linear-gradient(to right, black 0%, var(--color-background-section) 50%, transparent 100%);
+  width: 95%;
+}
+
+h5 {
+  margin-top: 1.5vh;
+}
+
+.banner-home {
   background-color: black;
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   border-bottom: solid 2px var(--color-border);
 }
 @media screen and (max-width: 900px) {
-  .div-flex .banner-home {
+  .banner-home {
     height: 25vh;
   }
 }
 @media screen and (max-width: 650px) {
-  .div-flex .banner-home {
+  .banner-home {
     height: 15vh;
   }
 }
-.div-flex .banner-home .banner {
+.banner-home .banner {
   background-image: url("../../assets/img_banner-home/8bits-banner.jpg");
   background-position: center;
   background-size: cover;
@@ -139,7 +165,7 @@
   box-shadow: 0 0 20px 1px transparent;
   transition: border-color 1s ease-in-out;
 }
-.div-flex .banner-home .banner:hover {
+.banner-home .banner:hover {
   animation: pulso 0.7s infinite alternate;
 }
 @keyframes pulso {
@@ -151,8 +177,4 @@
     border-color: var(--color-fuente);
     box-shadow: 0 0 20px 1px var(--color-fuente);
   }
-}
-
-h5 {
-  margin-top: 1.5vh;
 }/*# sourceMappingURL=style.css.map */
