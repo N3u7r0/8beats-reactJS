@@ -3,7 +3,6 @@ import "./style/style.css";
 
 export const Spin = ({ src, alt }) => {
   const [loading, setLoading] = useState(true);
-
   return (
     <>
       {loading && <h3 className="spin">loading...</h3>}

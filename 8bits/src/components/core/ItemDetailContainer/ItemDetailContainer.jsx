@@ -1,8 +1,11 @@
+import { useState, useEffect } from "react";
 import { Spin } from "../../ui";
 import { BtnDeleteItem } from "../BtnDeleteItem";
 import "./style/index.css";
 import fotoNoDisponible from "../../../assets/img_noDisponible/noDisponible.jpg";
+
 export const ItemDetailContainer = ({ rom }) => {
+
   return rom?.length === 0 ? (
     <Spin />
   ) : (

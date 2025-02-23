@@ -1,8 +1,11 @@
 .spin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   top: 50%;
-  left: 50;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el elemento */
   font-size: xx-large;
   text-align: center;
-  margin: 6vh;
 }/*# sourceMappingURL=style.css.map */
