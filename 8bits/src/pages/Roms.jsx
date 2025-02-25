@@ -42,8 +42,11 @@ export const Roms = () => {
       <h2 className="tituloPrincipal">ROMs</h2>
       <div className="div-nav_container-cards">
         <nav className="nav-itemListContainer">
-          <p>ROMs:</p>
           <ul>
+            <li>
+              {" "}
+              <p>ROMs:</p>
+            </li>
             <li>
               <Link to="/roms">
                 <button type="reset">Todos</button>

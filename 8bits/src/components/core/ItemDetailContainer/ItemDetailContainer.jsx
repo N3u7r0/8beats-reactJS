@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Spin } from "../../ui";
 import { BtnDeleteItem } from "../BtnDeleteItem";
 import "./style/index.css";

@@ -1,10 +1,11 @@
 .contenedor_Forms {
   display: flex;
-  margin: 1vh;
   flex-direction: column;
-  width: 50%;
+  margin: 2vw 1vh 2vw 1vh;
+  width: 45%;
   border: solid 2px var(--color-border);
   box-shadow: 0px 0px 10px 1px var(--color-shadow);
+  text-align: center;
 }
 @media screen and (max-width: 1100px) {
   .contenedor_Forms {

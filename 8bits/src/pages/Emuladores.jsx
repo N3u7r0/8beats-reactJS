@@ -49,8 +49,10 @@ export const Emuladores = () => {
       <h2 className="tituloPrincipal">Emuladores</h2>
       <div className="div-nav_container-cards">
         <nav className="nav-itemListContainer">
-          <p>Emuladores:</p>
           <ul>
+            <li>
+              <p>Emuladores:</p>
+            </li>
             <li>
               <Link to="/emuladores">
                 <button type="reset">Todos</button>
