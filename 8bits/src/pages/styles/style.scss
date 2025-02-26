@@ -65,18 +65,18 @@
     border-bottom: none;
     align-items: center;
     font-size: xx-small;
-    overflow-x: auto; /* Agrega scroll horizontal si es necesario */
-    -webkit-overflow-scrolling: touch; /* Desplazamiento suave en dispositivos móviles */
-    scrollbar-width: none; /* Para navegadores Firefox */
+    overflow-x: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; //para lo celus
+    scrollbar-width: none; // para firefox q no se vea el scroll bar
     @media screen and (max-width: 553px) {
       justify-content: center;
-      
     }
     ul {
       display: flex;
       flex-wrap: nowrap;
-      overflow: visible; /* Deja visible el desbordamiento horizontal */
-      white-space: nowrap; /* Evita el salto de línea en los elementos */
+      overflow: visible; // para q no se oculte los btns
+      white-space: nowrap; 
     }
     // el asterisco es para q se aplique a todos los elementos hijos
     ul * {
@@ -122,19 +122,19 @@
 
     //para corregir cuando se achica el largo y ancho
     @media screen and (max-width: 553px) and (max-height: 870px) {
-      height: 77.2vh;
+      height: 78vh;
     }
     @media screen and (max-width: 553px) and (max-height: 840px) {
-      height: 76.2vh;
+      height: 77vh;
     }
     @media screen and (max-width: 553px) and (max-height: 810px) {
-      height: 75.2vh;
+      height: 76vh;
     }
     @media screen and (max-width: 553px) and (max-height: 730px) {
-      height: 74.2vh;
+      height: 75vh;
     }
     @media screen and (max-width: 553px) and (max-height: 680px) {
-      height: 73.2vh;
+      height: 74vh;
     }
   }
 }
@@ -161,24 +161,24 @@
 
   // para corregir cuando se rompe la navbar
   @media screen and (max-width: 553px) {
-    height: 82vh;
+    height: 81.4vh;
   }
 
   //para corregir cuando se achica el largo y ancho
   @media screen and (max-width: 553px) and (max-height: 870px) {
-    height: 81.2vh;
+    height: 81.4vh;
   }
   @media screen and (max-width: 553px) and (max-height: 840px) {
-    height: 80.2vh;
+    height: 80.4vh;
   }
   @media screen and (max-width: 553px) and (max-height: 810px) {
-    height: 79.2vh;
+    height: 79.4vh;
   }
   @media screen and (max-width: 553px) and (max-height: 730px) {
-    height: 78.2vh;
+    height: 78.4vh;
   }
   @media screen and (max-width: 553px) and (max-height: 680px) {
-    height: 79.2vh;
+    height: 77.4vh;
   }
 }
 
