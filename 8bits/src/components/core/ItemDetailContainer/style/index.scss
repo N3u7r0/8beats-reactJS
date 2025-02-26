@@ -1,10 +1,13 @@
-.cardtv_cardIformeDetail {
+.contenedor-Detail {
   display: grid;
   grid-template-columns: 5fr auto;
   grid-template-rows: auto;
-  overflow: auto;
+  text-align: center;
   width: 100%;
-  @media screen and (max-width: 900px) {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @media screen and (max-width: 1255px) {
     display: flex;
     flex-direction: column;
     padding: 1vh;
@@ -17,9 +20,9 @@
     align-items: center;
     margin-top: 1vw;
     gap: 0.5vh;
-
     // control del parpadeo al iniciar la animacion.
     color: transparent;
+
     .tv-flex {
       display: flex;
       flex-direction: column;
@@ -42,14 +45,16 @@
       }
     }
     .btn {
-      font-size: x-small;
+      font-size:x-small;
+      font-weight: bold;
       display: flex;
       justify-content: center;
       align-items: center;
       background: linear-gradient(to top, black, rgb(50, 2, 112));
       cursor: pointer;
-      height: 2.5vh;
-      width: max-content;
+      height: auto;
+      width: auto;
+      padding: 1.2vh;
       border-radius: 100px;
       margin-bottom: 1vh;
       transition: box-shadow 0.7s;
@@ -154,12 +159,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.2vh;
+    justify-content: center;
+    gap: 1rem;
     margin: 2.5vh;
     overflow: block;
 
     p {
-      font-size: medium;
+      font-optical-sizing: auto;
       padding: 1vh;
       border: solid 0.4vh var(--color-border);
       background-color: rgba(36, 32, 32, 0.762);
@@ -210,7 +216,6 @@
   }
 
   .btn-delete {
-  
     position: relative;
     bottom: 0;
     left: 60%;
@@ -219,7 +224,7 @@
       height: 90px;
       z-index: 1;
       position: absolute;
-     left: 0;
+      left: 0;
       bottom: 40%;
       margin: 0.5vh;
       transform: scale(0.8);

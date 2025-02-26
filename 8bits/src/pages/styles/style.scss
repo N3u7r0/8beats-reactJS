@@ -1,199 +1,18 @@
+//titulo dinamico  que esta abajo del navbar
 .tituloPrincipal {
+  font-size: small;
   text-align: center;
   align-content: center;
-  padding: 0.5vh;
+  padding: 0.3rem;
   border: solid 0.5vh var(--color-border);
   background: linear-gradient(to right, black, var(--color-background-section));
-}
-
-/* contenedor cards de roms y emuladores */
-.div-nav_container-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: solid 0.5vh var(--color-border);
-
-  // navBar roms y emuladores!
-  .nav-itemListContainer {
-    position: sticky;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    padding: 0.2vh 0.5vw 0.2vh 0.5vw;
-    align-items: center;
-    justify-content: left;
-    // cancelo los stilos que no quiero de la etiqueta <nav> del componente roms (los etilos de la etiqueta estan declarados en nabBar.jsx).
-    box-shadow: none;
-    border-bottom: none;
-
-    ul {
-      align-items: center;
-      
-      
-      p {
-        font-size: smaller;
-        
-        @media screen and (max-width: 477px) {
-          display: none;
-        }
-      }
-      button {
-        font-size: smaller;
-      }
-    }
-  }
-  // ontenedor del box de las cards
-  .container-cards {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    background: linear-gradient(
-      to right,
-      black 0%,
-      var(--color-background-section) 50%,
-      transparent 100%
-    );
-    border-top: solid 0.5vh var(--color-border);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    padding-bottom: 10vh;
-
-    height: 85vh; // medida orginal       !CARDS!
-
-    // para corregir cuando se rompe la navbar
-    @media screen and (max-width: 477px) {
-      height: 80vh;
-    }
-
-    //para corregir cuando se achica el largo y ancho
-    @media screen and (max-width: 477px) and (max-height: 870px) {
-      height: 77vh;
-    }
-    @media screen and (max-width: 477px) and (max-height: 840px) {
-      height: 76vh;
-    }
-    @media screen and (max-width: 477px) and (max-height: 810px) {
-      height: 75vh;
-    }
-    @media screen and (max-width: 477px) and (max-height: 730px) {
-      height: 74vh;
-    }
-    @media screen and (max-width: 477px) and (max-height: 680px) {
-      height: 73vh;
-    }
+  @media screen and (max-width: 374px) {
+    display: none;
+    
   }
 }
 
-/* contenedor del rom detail */
-.div-flex {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border: solid 0.5vh var(--color-border);
-  background: linear-gradient(
-    to right,
-    black 0%,
-    var(--color-background-section) 50%,
-    transparent 100%
-  );
-
-  height: 88.5vh; // medida orginal       !rom detail!
-
-  // para corregir cuando se rompe la navbar
-  @media screen and (max-width: 477px) {
-    height: 85vh;
-  }
-
-  //para corregir cuando se achica el largo y ancho
-  @media screen and (max-width: 477px) and (max-height: 870px) {
-    height: 82vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 840px) {
-    height: 81vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 810px) {
-    height: 80vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 730px) {
-    height: 79vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 680px) {
-    height: 78vh;
-  }
-}
-
-.div-flex-home {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  padding-bottom: 10vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  border: solid 0.5vh var(--color-border);
-  background: linear-gradient(
-    to right,
-    black 0%,
-    var(--color-background-section) 50%,
-    transparent 100%
-  );
-  height: 62.6vh; // medida largo scroll       !HOME!
-
-  // para corregir cuando se rompe la navbar
-  @media screen and (max-width: 477px) {
-    height: 59vh;
-  }
-  //para corregir cuando se achica el largo y ancho
-  @media screen and (max-width: 477px) and (max-height: 870px) {
-    height: 56vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 840px) {
-    height: 55vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 810px) {
-    height: 54vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 730px) {
-    height: 53vh;
-  }
-  @media screen and (max-width: 477px) and (max-height: 680px) {
-    height: 52vh;
-  }
-  .div-ultimoRoms {
-    border: solid 3px var(--color-border);
-    background: linear-gradient(
-      to right,
-      black 0%,
-      var(--color-background-section) 50%,
-      transparent 100%
-    );
-    width: 95%;
-  }
-  .forms-home {
-    width: 95%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    border: solid 3px var(--color-border);
-    background: linear-gradient(
-      to right,
-      black 0%,
-      var(--color-background-section) 50%,
-      transparent 100%
-    );
-  }
-}
-
-h5 {
-  margin-top: 1.5vh;
-}
-
+//contenedor del banner
 .banner-home {
   background-color: black;
   width: 100%;
@@ -225,4 +44,193 @@ h5 {
       box-shadow: 0 0 20px 1px var(--color-fuente);
     }
   }
+}
+
+/* contenedor cards de roms y emuladores */
+.div-flex-cards_nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 0.5vh var(--color-border);
+
+  // navBar roms y emuladores!
+  .nav-itemListContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0.3rem;
+    // cancelo los stilos que no quiero de la etiqueta <nav> del componente roms (los etilos de la etiqueta estan declarados en nabBar.jsx).
+    justify-content: left;
+    box-shadow: none;
+    border-bottom: none;
+    align-items: center;
+    font-size: xx-small;
+
+    // el asterisco es para q se aplique a todos los elementos hijos
+    ul * {
+      display: flex;
+      flex-wrap: nowrap;
+      
+      align-self: center;
+      font-size: small;
+      p {
+        // titulo de cada navbar
+        @media screen and (max-width: 553px) {
+          display: none;
+        }
+      }
+    }
+  }
+  // ontenedor del box de las cards
+  .container-cards {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background: linear-gradient(
+      to right,
+      black 0%,
+      var(--color-background-section) 50%,
+      transparent 100%
+    );
+    border-top: solid 0.5vh var(--color-border);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 10vh;
+
+    height: 83.5vh; // medida orginal       !CARDS!
+
+    // para corregir cuando se rompe la navbar
+    @media screen and (max-width: 553px) {
+      height: 79vh;
+    }
+
+    //para corregir cuando se achica el largo y ancho
+    @media screen and (max-width: 553px) and (max-height: 870px) {
+      height: 77vh;
+    }
+    @media screen and (max-width: 553px) and (max-height: 840px) {
+      height: 76vh;
+    }
+    @media screen and (max-width: 553px) and (max-height: 810px) {
+      height: 75vh;
+    }
+    @media screen and (max-width: 553px) and (max-height: 730px) {
+      height: 74vh;
+    }
+    @media screen and (max-width: 553px) and (max-height: 680px) {
+      height: 73vh;
+    }
+  }
+}
+
+/* contenedor del rom detail */
+.div-flex-detail {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  //este contenedor no tiene overflow scroll xq estamos usando el escroll de itemDEtail
+
+  border: solid 0.5vh var(--color-border);
+  background: linear-gradient(
+    to right,
+    black 0%,
+    var(--color-background-section) 50%,
+    transparent 100%
+  );
+
+  height: 86.5vh; // medida orginal       !rom detail!
+
+  // para corregir cuando se rompe la navbar
+  @media screen and (max-width: 553px) {
+    height: 82vh;
+  }
+
+  //para corregir cuando se achica el largo y ancho
+  @media screen and (max-width: 553px) and (max-height: 870px) {
+    height: 81vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 840px) {
+    height: 80vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 810px) {
+    height: 79vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 730px) {
+    height: 78vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 680px) {
+    height: 79vh;
+  }
+}
+
+/* contenedor del home */
+.div-flex-home {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-bottom: 10vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: solid 0.5vh var(--color-border);
+  background: linear-gradient(
+    to right,
+    black 0%,
+    var(--color-background-section) 50%,
+    transparent 100%
+  );
+  height: 60.6vh; // medida largo scroll       !HOME!
+
+  // para corregir cuando se rompe la navbar
+  @media screen and (max-width: 553px) {
+    height: 56vh;
+  }
+  //para corregir cuando se achica el largo y ancho
+  @media screen and (max-width: 553px) and (max-height: 870px) {
+    height: 55vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 840px) {
+    height: 54vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 810px) {
+    height: 53vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 730px) {
+    height: 52vh;
+  }
+  @media screen and (max-width: 553px) and (max-height: 680px) {
+    height: 51vh;
+  }
+  .div-ultimoRoms {
+    border: solid 3px var(--color-border);
+    background: linear-gradient(
+      to right,
+      black 0%,
+      var(--color-background-section) 50%,
+      transparent 100%
+    );
+    width: 95%;
+  }
+  .forms-home {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: solid 3px var(--color-border);
+    background: linear-gradient(
+      to right,
+      black 0%,
+      var(--color-background-section) 50%,
+      transparent 100%
+    );
+  }
+  h6 {
+    font-optical-sizing: auto;
+    margin: 3.2vh 0vw 3.2vh 0vw;
+  }	
 }

@@ -1,18 +1,20 @@
-.cardtv_cardIformeDetail {
+.contenedor-Detail {
   display: grid;
   grid-template-columns: 5fr auto;
   grid-template-rows: auto;
-  overflow: auto;
+  text-align: center;
   width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-@media screen and (max-width: 900px) {
-  .cardtv_cardIformeDetail {
+@media screen and (max-width: 1255px) {
+  .contenedor-Detail {
     display: flex;
     flex-direction: column;
     padding: 1vh;
   }
 }
-.cardtv_cardIformeDetail .cardTv {
+.contenedor-Detail .cardTv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,51 +24,52 @@
   color: transparent;
   /* efecto de la card con la tv */
 }
-.cardtv_cardIformeDetail .cardTv .tv-flex {
+.contenedor-Detail .cardTv .tv-flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 0.8s;
 }
-.cardtv_cardIformeDetail .cardTv .tv-flex .img-card {
+.contenedor-Detail .cardTv .tv-flex .img-card {
   max-width: 80%;
   border: solid 0.2vh var(--color-border);
   z-index: 2;
   transition: 0.9s;
 }
-.cardtv_cardIformeDetail .cardTv .tv-flex .tv-parlante-a,
-.cardtv_cardIformeDetail .cardTv .tv-flex .tv-parlante-b {
+.contenedor-Detail .cardTv .tv-flex .tv-parlante-a,
+.contenedor-Detail .cardTv .tv-flex .tv-parlante-b {
   display: none;
 }
-.cardtv_cardIformeDetail .cardTv .tv-flex .contenedor-botonera-logo {
+.contenedor-Detail .cardTv .tv-flex .contenedor-botonera-logo {
   display: none;
 }
-.cardtv_cardIformeDetail .cardTv .btn {
+.contenedor-Detail .cardTv .btn {
   font-size: x-small;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(to top, black, rgb(50, 2, 112));
   cursor: pointer;
-  height: 2.5vh;
-  width: -moz-max-content;
-  width: max-content;
+  height: auto;
+  width: auto;
+  padding: 1.2vh;
   border-radius: 100px;
   margin-bottom: 1vh;
   transition: box-shadow 0.7s;
 }
-.cardtv_cardIformeDetail .cardTv .btn:hover {
+.contenedor-Detail .cardTv .btn:hover {
   background: linear-gradient(to top, black, rgba(136, 12, 174, 0.762));
   box-shadow: 0px 0px 70px 5px rgba(200, 0, 250, 0.7);
   transition: all 0.4s;
 }
-.cardtv_cardIformeDetail .cardTv .btn:active {
+.contenedor-Detail .cardTv .btn:active {
   box-shadow: 0px 0px 70px 15px rgb(250, 0, 250);
   color: whitesmoke;
   transition: 0.4s;
 }
-.cardtv_cardIformeDetail .cardTv:hover {
+.contenedor-Detail .cardTv:hover {
   background: linear-gradient(to top, black, rgba(36, 32, 32, 0.762));
   box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.764);
   margin: 2vh;
@@ -74,7 +77,7 @@
   border: 0.4vh solid var(--color-border);
   transition: 0.5s;
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex {
+.contenedor-Detail .cardTv:hover .tv-flex {
   border-radius: 20px;
   transition: all 0.5s;
   margin: 1% 10% 3% 10%;
@@ -84,7 +87,7 @@
   border-radius: 20px;
   transition: 0.8s;
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .tv {
+.contenedor-Detail .cardTv:hover .tv-flex .tv {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -92,8 +95,8 @@
   position: relative;
   width: 100%;
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .tv .tv-parlante-a,
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .tv .tv-parlante-b {
+.contenedor-Detail .cardTv:hover .tv-flex .tv .tv-parlante-a,
+.contenedor-Detail .cardTv:hover .tv-flex .tv .tv-parlante-b {
   display: inline;
   height: 13vmax;
   border-radius: 8px;
@@ -103,13 +106,13 @@
   z-index: 1;
   transition: 0.3s;
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .tv .tv-parlante-a {
+.contenedor-Detail .cardTv:hover .tv-flex .tv .tv-parlante-a {
   left: 5%;
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .tv .tv-parlante-b {
+.contenedor-Detail .cardTv:hover .tv-flex .tv .tv-parlante-b {
   right: 5%;
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .contenedor-botonera-logo {
+.contenedor-Detail .cardTv:hover .tv-flex .contenedor-botonera-logo {
   display: inline;
   display: flex;
   flex-direction: row;
@@ -119,33 +122,34 @@
   width: 100%;
   z-index: 0;
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .contenedor-botonera-logo .tv-logo {
+.contenedor-Detail .cardTv:hover .tv-flex .contenedor-botonera-logo .tv-logo {
   font-size: x-small;
   position: relative;
   transform: translate(50%, -0.5vmax);
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .contenedor-botonera-logo .botonera {
+.contenedor-Detail .cardTv:hover .tv-flex .contenedor-botonera-logo .botonera {
   font-size: xx-small;
   position: relative;
   transform: translate(7.5vmax, -0.2vmax);
 }
-.cardtv_cardIformeDetail .cardTv:hover .tv-flex .img-card {
+.contenedor-Detail .cardTv:hover .tv-flex .img-card {
   border: solid 0.4vh var(--color-border-tv-parlantes);
   box-shadow: 0px 0px 15px 7px var(--color-shadow);
   border-radius: 25px;
   margin: 2% 8% 3% 8%;
   transition: box-shadow 2s, border 1.5s;
 }
-.cardtv_cardIformeDetail .cardInfoDetail {
+.contenedor-Detail .cardInfoDetail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2vh;
+  justify-content: center;
+  gap: 1rem;
   margin: 2.5vh;
   overflow: block;
 }
-.cardtv_cardIformeDetail .cardInfoDetail p {
-  font-size: medium;
+.contenedor-Detail .cardInfoDetail p {
+  font-optical-sizing: auto;
   padding: 1vh;
   border: solid 0.4vh var(--color-border);
   background-color: rgba(36, 32, 32, 0.762);
@@ -155,11 +159,11 @@
   overflow-x: hidden;
 }
 @media screen and (max-width: 900px) {
-  .cardtv_cardIformeDetail .cardInfoDetail p {
+  .contenedor-Detail .cardInfoDetail p {
     width: 100%;
   }
 }
-.cardtv_cardIformeDetail .fotos-contenedor {
+.contenedor-Detail .fotos-contenedor {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -169,19 +173,19 @@
   padding: 3vh;
   margin-bottom: 4vh;
 }
-.cardtv_cardIformeDetail .fotos-contenedor .fotosGameplay {
+.contenedor-Detail .fotos-contenedor .fotosGameplay {
   border: 2px solid var(--color-border);
   width: 22%;
   transition: 0.2s;
 }
-.cardtv_cardIformeDetail .fotos-contenedor .fotosGameplay:hover {
+.contenedor-Detail .fotos-contenedor .fotosGameplay:hover {
   border: 3px solid var(--color-border);
   box-shadow: 1px 2px 10px 7px var(--color-shadow);
   border-radius: 10px;
   transform: scale(1.1);
   transition: 0.3s;
 }
-.cardtv_cardIformeDetail .fotos-contenedor .fotosGameplay:active {
+.contenedor-Detail .fotos-contenedor .fotosGameplay:active {
   position: absolute;
   top: 40%;
   bottom: 60%;
@@ -191,13 +195,13 @@
   cursor: none;
   z-index: 1;
 }
-.cardtv_cardIformeDetail .btn-delete {
+.contenedor-Detail .btn-delete {
   position: relative;
   bottom: 0;
   left: 60%;
 }
 @media screen and (max-width: 900px) {
-  .cardtv_cardIformeDetail .btn-delete {
+  .contenedor-Detail .btn-delete {
     width: 130px;
     height: 90px;
     z-index: 1;

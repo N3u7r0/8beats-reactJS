@@ -36,12 +36,11 @@
       gap: 0.8vh;
 
       .img-card {
-        display: flex;
-        align-items: center;
-        width: 90%;
+        min-width: 95%;
+        max-width: 95%;
         height: 27vh;
         object-fit: cover;
-        margin: auto; // esto es para q no deforme la img y se mantenga en el centro.
+        margin: auto;
         border: solid 0.2vh var(--color-border);
         transition: 0.5;
       }
@@ -52,6 +51,7 @@
         font-size: 0px;
         margin: 0.5vh 1vw 0.5vh 1vw;
         transition: 0.4s;
+        text-align: center;
       }
 
       .btn {

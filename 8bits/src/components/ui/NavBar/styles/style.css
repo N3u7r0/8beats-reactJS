@@ -10,34 +10,45 @@ nav {
   border-bottom: solid 0.5vh var(--color-border);
   box-shadow: 0px 0px 7px 12px rgb(0, 0, 1);
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 553px) {
   nav {
     justify-content: space-evenly;
   }
 }
 nav h1 {
-  transform: scale(1.4);
   padding-left: 2rem;
-  margin: 0%;
+  margin: 0.2rem;
   transition: 0.5s;
+  transform: scale(1.4);
+}
+@media screen and (max-width: 553px) {
+  nav h1 {
+    transform: scale(1);
+  }
 }
 nav h1:hover {
   transform: scale(1.5) translateY(0.1vw);
   transition: 0.8s;
 }
+@media screen and (max-width: 553px) {
+  nav h1:hover {
+    transform: scale(1.2);
+  }
+}
 nav ul {
   display: flex;
   justify-content: left;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0rem 1rem 0rem 2rem;
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 475px) {
   nav ul {
     justify-content: center;
   }
 }
 nav ul li {
-  margin: 0.7vh;
   transition: 0.5s;
 }
 nav ul li:hover {
@@ -52,4 +63,10 @@ nav ul li button {
   cursor: pointer;
   text-shadow: 4px 4px 3px rgb(0, 0, 0);
   font-size: medium;
+}
+@media screen and (max-width: 475px) {
+  nav ul li button {
+    justify-content: center;
+    font-size: small;
+  }
 }/*# sourceMappingURL=style.css.map */

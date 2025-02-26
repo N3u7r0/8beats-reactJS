@@ -9,7 +9,7 @@ export const ItemDetailContainer = ({ rom }) => {
     <Spin />
   ) : (
     <>
-      <div className="cardtv_cardIformeDetail">
+      <div className="contenedor-Detail">
         <article key={rom.id} className="cardTv">
           <h3>{rom.titulo}</h3>
 

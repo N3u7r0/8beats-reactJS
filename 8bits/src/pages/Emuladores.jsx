@@ -47,7 +47,9 @@ export const Emuladores = () => {
   return (
     <>
       <h2 className="tituloPrincipal">Emuladores</h2>
-      <div className="div-nav_container-cards">
+      
+      <div className="div-flex-cards_nav">
+
         <nav className="nav-itemListContainer">
           <ul>
             <li>
@@ -70,7 +72,7 @@ export const Emuladores = () => {
             </li>
             <li>
               <Link to="/emuladores/neogeo">
-                <button type="button">Neo-Geo</button>
+                <button type="button">NeoGeo</button>
               </Link>
             </li>
             <li>

@@ -1,6 +1,6 @@
 .btn_1up {
   order: 4;
-  position: absolute left;
+  position: relative;
   width: 37px;
   height: 37px;
   border-radius: 100%;

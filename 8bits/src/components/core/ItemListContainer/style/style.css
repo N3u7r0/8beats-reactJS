@@ -32,9 +32,8 @@
   gap: 0.8vh;
 }
 .contenedor-cards .card ul .img-card {
-  display: flex;
-  align-items: center;
-  width: 90%;
+  min-width: 95%;
+  max-width: 95%;
   height: 27vh;
   -o-object-fit: cover;
      object-fit: cover;
@@ -47,6 +46,7 @@
   font-size: 0px;
   margin: 0.5vh 1vw 0.5vh 1vw;
   transition: 0.4s;
+  text-align: center;
 }
 .contenedor-cards .card ul .btn {
   display: flex;

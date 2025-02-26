@@ -6,4 +6,9 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: var(--color-footer);
+}
+@media screen and (max-width: 435px) {
+  footer {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -12,22 +12,20 @@ export const Home = () => {
     <>
       <h2 className="tituloPrincipal">Home</h2>
 
-
       <header className="banner-home">
         <div className="banner"></div>
       </header>
 
       <section className="div-flex-home">
-        <h3>ultimos roms</h3>
+        <h6>ultimos roms</h6>
         <section className="div-ultimoRoms">
-        <ItemListContainer ultimosRoms={ultimosRoms} />
+          <ItemListContainer ultimosRoms={ultimosRoms} />
         </section>
-          <h3>subi tu rom/emulador</h3>
+        <h6>subi tu rom/emulador</h6>
         <section className="forms-home">
           <FormRoms />
           <FormEmuladores />
         </section>
-
       </section>
     </>
   );

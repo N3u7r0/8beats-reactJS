@@ -8,10 +8,10 @@ export const RomDetail = () => {
 
   return (
     <>
-    <h2 className="tituloPrincipal">8-bits</h2>
-      <section className="div-flex">
+      <h2 className="tituloPrincipal">8-bits</h2>
+      <div className="div-flex-detail">
         <ItemDetailContainer rom={rom} />
-      </section>
+      </div>
     </>
   );
 };
