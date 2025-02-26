@@ -6,7 +6,7 @@ export const NavBar = () => {
   return (
     <nav>
       <Link to="/">
-        <h1>8-bits</h1>
+        <h1>8-Bits</h1>
       </Link>
 
       <ul>
