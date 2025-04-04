@@ -3,7 +3,7 @@ import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   // la variable de entorno estan en el archivo .env (en vite se se accede con import.meta.env, no con prosees.env)
-  apiKey:  import.meta.env.VITE_APP_APPIKEY,
+  apiKey: import.meta.env.VITE_APP_APPIKEY,
   authDomain: "bits-6ecf6.firebaseapp.com",
   projectId: "bits-6ecf6",
   storageBucket: "bits-6ecf6.appspot.com",

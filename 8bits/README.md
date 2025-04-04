@@ -1,40 +1,54 @@
-## 8-bits reactJs.
+# 8-Bits ReactJS
 
-Developer: Brian Sabatini.<br>
-<br>
-Dependencias:<br>
-<br>
-Copiar <br>
-npm i <br>
-npm i sass <br>
-npm react-router<br>
-npm react-router-dom<br>
-npm install sweetalert2<br>
-
-para correr:<br>
-npm run dev<br>
+### Authors
+- [@Brian Fabian Sabatini](https://n3u7r0.github.io/Brian-Sabatini--Repositorio/)>
 
 
-------------------------!!!!!! lógica !!!!!----------------------------<br>
 
-!! Archivos barril !!<br>
-Todos los archivos que están en las carpetas integran un archivo index.js para mejor accesibilidad en uso de rutas.<br>
-<br>
-!! Pages !!<br>
-Pages contiene una sola carpeta de estilos para todos sus archivos jsx.
-<br>
-!! Custom hooks !!!<br>
-La lógica de las llamadas a la base de datosse guarda en archivos separados. Uno para obtener los datos a nivel documento y otro para tomar el ID. Esto podría mejorarse en un solo componente, pero da la oportunidad de darte una herramienta futura al guardar uno por ID. Los returns de los custom hooks son utilizados en los componentes ItemListContainer.jsx e ItemDetailContainer.jsx por medio de props.
-<br>
+## Dependencias
+Este proyecto requiere las siguientes dependencias:
+- **npm**
+- **react-router-dom**
+- **sass**
+- **firebase**
+- **sweetalert2**
 
-------------------------!!!!!! Estilos !!!!!---------------------------<br>
+### Instalación
+Para instalar todas las dependencias, ejecuta el siguiente comando:
+```bash
+npm i
+```
 
-El proyecto está planteado con estilos personalizados, se utilizó Sass para poder mantener prolijidad y la accesibilidad para mixins si se llega a necesitar.<br>
-<br>
-Concepto<br>
-La idea es que el proyecto tenga la posibilidad de ser escalable, de fácil mantenimiento y full responsive. Se hace hincapié en el uso de estilos sin librerías de UI, pero se utiliza swal2 para agilizar las alertas y no crear un componente dinamico.
-se trata de matener la semantica html correcta para una mejor lectura y calificacion.<br>
-<br>
-¡Muchas gracias por echarle un ojo!<br>
-<br>
-Brian Fabián Sabatini.<br>
+#### Custom Hooks
+
+ ### useEmulators, useRoms, useRomsById, useRomsLast
+
+Estos hooks trae los Roms y emuladores desde firebase, los mismo se encargan en guardar los mismo en el contexto para evitar que los llamen constante mente.
+
+🧠 Lógica del Proyecto
+
+### Archivos Barril
+-Todas las carpetas incluyen un archivo index.js para facilitar la accesibilidad y uso de rutas.
+
+### Pages
+- La carpeta Pages incluye una única carpeta de estilos compartidos para todos los archivos .jsx .
+
+🎨 Estilos
+
+El proyecto utiliza estilos personalizados con Sass para:
+-Mantener el código organizado.
+-Facilitar la creación de mixins si son necesarios.
+
+💡 Concepto y Filosofía
+
+Escalabilidad y Mantenimiento:
+-Diseñado para se escalable y de facil mantenimiento.
+
+Responsive:
+-Totalmente adaptable a difentes tamaños de pantalla.
+
+Sin Librerías de UI:
+-Se utilizan estilos personalizados, con la excepción de SweetAlert2 para alertas, agilizando su implementación sin necesidad de crear un componente dinámico.
+
+Semántica HTML:
+-Cumple con las mejores prácticas de semántica para mejorar la lectura y calificación del código.
