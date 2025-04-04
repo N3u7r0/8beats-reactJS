@@ -1,8 +1,6 @@
 {
-
-  
   "hosting": {
-"rewrites": [
+    "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
@@ -11,10 +9,6 @@
 
     "public": "dist",
     "site": "8bitsroms",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }

@@ -23,16 +23,7 @@
 
 <body>
   <div id="root"></div>
-
   <script type="module" src="/src/main.jsx"></script>
-  <!--  este script toma el valor de la posición de la pantalla y lo aplica al body de la página por medio del mouse-->
-  <script>
-    document.addEventListener('mousemove', function (e) {
-      let x = e.clientX / window.innerWidth * 70;
-      let y = e.clientY / window.innerHeight * 10;
-      document.body.style.backgroundPosition = `${x}% ${y}%`;
-    });
-  </script>
 </body>
 
 </html>
